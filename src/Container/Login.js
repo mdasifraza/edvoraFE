@@ -9,7 +9,7 @@ const Login = ({history}) => {
     const {dispatch}=useContext(Store)
     const SUBMIT=(e)=>{
         e.preventDefault()
-        fetch('/login',{
+        fetch('https://edvorabe.herokuapp.com/login',{
             method:'POST',
             body:JSON.stringify({email,password}),
             headers:{

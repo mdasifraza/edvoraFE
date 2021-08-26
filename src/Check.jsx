@@ -15,7 +15,7 @@ const PokemonList = () => {
 
   useEffect(() => {
     if (localStorage.getItem('Token') !== null)
-      fetch('/getPokemon', {
+      fetch('https://edvorabe.herokuapp.com/getPokemon', {
         headers: {
           Token: localStorage.getItem('Token')
         }
@@ -47,7 +47,7 @@ const PokemonList = () => {
   };
   const Favorite = (name) => {
     setPokemon((s) => ({ ...s, [name]: name }))
-    fetch('/addPokemon', {
+    fetch('https://edvorabe.herokuapp.com/addPokemon', {
       method: 'post',
       body: JSON.stringify({ name }),
       headers: {

@@ -9,7 +9,7 @@ const SignUp = ({history}) => {
     const {dispatch}=useContext(Store)
     const SUBMIT=(e)=>{
         e.preventDefault()
-        fetch('/signup',{
+        fetch('https://edvorabe.herokuapp.com/signup',{
             method:'POST',
             body:JSON.stringify({name,email,password}),
             headers:{

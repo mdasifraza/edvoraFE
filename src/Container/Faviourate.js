@@ -5,7 +5,7 @@ const Faviourate = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
     if (localStorage.getItem('Token') !== null)
-      fetch("/getPokemon", {
+      fetch("https://edvorabe.herokuapp.com/getPokemon", {
         headers: {
           Token: localStorage.getItem('Token')
         }
